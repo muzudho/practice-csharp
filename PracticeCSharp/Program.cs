@@ -9,7 +9,8 @@ namespace PracticeCSharp
             // Vote.Go();
             // DistributionOfRandom.Go();
             // DistributionOfRandomLesson2.Go();
-            DistributionOfRandomApplication1.Go();
+            // DistributionOfRandomApplication1.Go();
+            DistributionOfRandomApplication2.Go();
         }
     }
 }
