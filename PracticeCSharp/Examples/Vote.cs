@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace PracticeCSharp
+namespace PracticeCSharp.Examples
 {
     public static class Vote
     {

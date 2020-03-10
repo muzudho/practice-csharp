@@ -1,10 +1,13 @@
-﻿namespace PracticeCSharp
+﻿using PracticeCSharp.Examples;
+
+namespace PracticeCSharp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Vote.Go();
+            // Vote.Go();
+            DistributionOfRandom.Go();
         }
     }
 }
