@@ -65,7 +65,7 @@ namespace PracticeCSharp.Examples
             Console.WriteLine(@$"Total              = {total,10}");
             Console.WriteLine(@$"Size               = {size,10}");
             Console.WriteLine(@$"Total < Size ?     = {total < size,10}");
-            Console.WriteLine(@$"Total / Size       = {total / size,10}");
+            Console.WriteLine(@$"Total / Size       = {(float)total / (float)size, 10:F1}");
             Console.WriteLine(@$"Total / Size * 2.7 = {System.Math.Ceiling(total / size * 2.7),10} <-- Probably smaller than Max! Unless your luck is bad.");
             Console.WriteLine(@$"Max                = {max,10}");
         }
