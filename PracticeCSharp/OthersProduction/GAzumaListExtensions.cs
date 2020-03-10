@@ -1,4 +1,7 @@
-﻿using System;
+﻿///
+/// [【Unity】Listから条件に一致する要素をランダムに1個抽出する拡張メソッド](https://qiita.com/azumagoro/items/c3177d2a2e7c6ec7af7e)
+///
+using System;
 using System.Collections.Generic;
 using Object = System.Object;
 // using Random = UnityEngine.Random; // ←無い☆（＾～＾）
