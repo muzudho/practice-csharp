@@ -8,7 +8,7 @@ namespace PracticeCSharp.Examples
 
     static class ListExtensions
     {
-        public static int RandomIndexOf<T>(this List<T> anyList, HitCallback<T> hitCallback, Random random)
+        public static T GetAtRandom<T>(this List<T> anyList, HitCallback<T> hitCallback, Random random)
         {
             var distribution = new int[anyList.Count];
             var rest = anyList.Count;
@@ -19,10 +19,11 @@ namespace PracticeCSharp.Examples
                 var index = random.Next(anyList.Count);
                 distribution[index]++;
 
-                if (hitCallback(anyList[index]))
+                var item = anyList[index];
+                if (hitCallback(item))
                 {
                     // Hit!
-                    return index;
+                    return item;
                 }
                 else if (distribution[index] < 2)
                 {
@@ -36,7 +37,7 @@ namespace PracticeCSharp.Examples
             }
 
             // I give up.
-            return -1;
+            return default(T);
         }
     }
 
@@ -72,12 +73,12 @@ namespace PracticeCSharp.Examples
             Console.WriteLine(@$"Size               = {size,10}");
 
             // This is a search algorithm.
-            var actual = anyList.RandomIndexOf((item) => item.Age == 13, random);
+            var actual = anyList.GetAtRandom((item) => item.Age == 13, random);
 
             // Assert!
             Console.WriteLine("Result");
             Console.WriteLine("-------------------------------");
-            Console.WriteLine(@$"Expected={expected} Actual={actual}");
+            Console.WriteLine(@$"Age = {actual?.Age}");
         }
     }
 }
