@@ -1,4 +1,5 @@
 ﻿using PracticeCSharp.Examples;
+using PracticeCSharp.SpeedMeasurement;
 
 namespace PracticeCSharp
 {
@@ -10,7 +11,8 @@ namespace PracticeCSharp
             // DistributionOfRandom.Go();
             // DistributionOfRandomLesson2.Go();
             // DistributionOfRandomApplication1.Go();
-            DistributionOfRandomApplication2.Go();
+            // DistributionOfRandomApplication2.Go();
+            DistributionOfRandomSpeedMeasurement.Go();
         }
     }
 }
