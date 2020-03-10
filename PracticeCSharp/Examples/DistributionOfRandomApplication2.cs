@@ -30,13 +30,13 @@ namespace PracticeCSharp.Examples
                     rest--;
                     if (rest < 1)
                     {
-                        // You are out of luck.
+                        // There was nothing!
                         break;
                     }
                 }
             }
 
-            // I give up.
+            // Disappointed.
             return default(T);
         }
     }
