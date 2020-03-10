@@ -8,7 +8,7 @@ namespace PracticeCSharp.Examples
 
     static class ListExtensions
     {
-        public static T GetAtRandom<T>(this IList<T> anyList, HitCallback<T> hitCallback, Random random)
+        public static T GetAtRandom<T>(this IReadOnlyList<T> anyList, HitCallback<T> hitCallback, Random random)
         {
             var distribution = new int[anyList.Count];
             var rest = anyList.Count;
