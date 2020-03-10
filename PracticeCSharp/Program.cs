@@ -7,7 +7,8 @@ namespace PracticeCSharp
         static void Main(string[] args)
         {
             // Vote.Go();
-            DistributionOfRandom.Go();
+            // DistributionOfRandom.Go();
+            DistributionOfRandomLesson2.Go();
         }
     }
 }
