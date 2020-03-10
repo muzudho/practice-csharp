@@ -8,7 +8,7 @@ namespace PracticeCSharp.Examples
 
     static class ListExtensions
     {
-        public static T GetAtRandom<T>(this List<T> anyList, HitCallback<T> hitCallback, Random random)
+        public static T GetAtRandom<T>(this IList<T> anyList, HitCallback<T> hitCallback, Random random)
         {
             var distribution = new int[anyList.Count];
             var rest = anyList.Count;
@@ -62,7 +62,8 @@ namespace PracticeCSharp.Examples
             var size = random.Next(2, 1000000);
 
             // Fill the dammy with list.
-            List<AnyObject> anyList = Enumerable.Repeat(new AnyObject(5963), size).ToList();
+            //List<AnyObject> anyList = Enumerable.Repeat(new AnyObject(5963), size).ToList();
+            AnyObject[] anyList = Enumerable.Repeat(new AnyObject(5963), size).ToArray();
 
             // This is a hit. Age 13.
             var expected = random.Next(0, size - 1);
